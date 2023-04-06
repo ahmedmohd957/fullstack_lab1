@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Album</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-4 mb-4">Create a new album</h2>
+        <form method="POST" action="/albums" class="form">
+            <div class="form-group">
+                <label>Title:<input type="text" class="form-control" name="title" required></label>
+            </div>
+            <div class="form-group">
+                <label>Arist:<input type="text" class="form-control" name="artist" required></label>
+            </div>
+            <div class="form-group">
+                <label>Year:<input type="number" class="form-control" name="year" required></label>
+            </div>
+            <input class="btn btn-secondary form-submit" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
