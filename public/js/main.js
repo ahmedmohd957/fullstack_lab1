@@ -1,7 +1,7 @@
 // Fetch all albums
 async function getAlbums() {
     try {
-        const resonse = await fetch("http://localhost:3000/albums");
+        const resonse = await fetch("/albums");
         return await resonse.json();
     } catch (error) {
         console.error("Error fetching albums:", error);
@@ -11,7 +11,7 @@ async function getAlbums() {
 // Fetch album by title
 async function getAlbum(title) {
     try {
-        const response = await fetch(`http://localhost:3000/albums/${title}`);
+        const response = await fetch(`/albums/${title}`);
         return await response.json();
     } catch (error) {
         console.error("Error fetching album:", error);
@@ -21,7 +21,7 @@ async function getAlbum(title) {
 // Delete album
 async function deleteAlbum(albumId) {
     try {
-        const response = await fetch(`http://localhost:3000/albums/${albumId}`, {
+        const response = await fetch(`/albums/${albumId}`, {
             method: 'DELETE',
         });
         return response;
